@@ -9,18 +9,12 @@
     "Rose"
   ],
   "contact": {
-    "homepage": "",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/YeahImRose/BetterUIScale"
   },
 
   "license": "CC0-1.0",
 
   "environment": "*",
-  "entrypoints": {
-    "client": [
-      
-    ]
-  },
   "mixins": [
     "betteruiscale.mixins.json"
   ],
@@ -30,5 +24,8 @@
     "fabric": "*",
     "minecraft": "1.17.x",
     "java": ">=16"
+  },
+  "suggests": {
+    "sodium-fabric": "*"
   }
 }

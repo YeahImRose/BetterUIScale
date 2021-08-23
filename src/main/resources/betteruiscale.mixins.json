@@ -3,12 +3,14 @@
   "minVersion": "0.8",
   "package": "net.rosemods.betteruiscale.mixin",
   "compatibilityLevel": "JAVA_16",
-  "mixins": [
-    "MixinWindow"
-  ],
   "client": [
+    "MixinWindow",
+    "compat.MixinSodiumGameOptionPages"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "mixins": [
+    "compat.MixinSodiumGameOptionPages"
+  ]
 }
