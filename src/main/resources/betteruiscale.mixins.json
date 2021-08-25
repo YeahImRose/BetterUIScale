@@ -11,6 +11,8 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "MixinOption",
+    "MixinVideoOptionsScreen",
     "compat.MixinSodiumGameOptionPages"
   ]
 }
