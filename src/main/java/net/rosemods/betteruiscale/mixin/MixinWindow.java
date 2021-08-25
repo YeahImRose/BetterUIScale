@@ -24,11 +24,12 @@ public class MixinWindow {
 
     /**
      * @author Rose
+	 * @reason Modifies gui scaling
      */
     @Overwrite
     public int calculateScaleFactor(int guiScale, boolean forceUnicodeFont) {
 		int i;
-		for(i = 1; i != guiScale && i < this.framebufferWidth && i < this.framebufferHeight && this.framebufferWidth / (i + 1) >= 80 && this.framebufferHeight / (i + 1) >= 60; ++i) {
+		for(i = 1; i != guiScale && i < this.framebufferWidth && i < this.framebufferHeight && this.framebufferWidth / (i + 1) >= 40 && this.framebufferHeight / (i + 1) >= 30; ++i) {
 		}
 
 		if (forceUnicodeFont && i % 2 != 0) {
@@ -40,10 +41,13 @@ public class MixinWindow {
 
 	/**
 	 * @author Rose
+	 * @reason Modifies gui scaling
 	 */
 	@Overwrite
 	public void setScaleFactor(double scaleFactor) {
-		if(scaleFactor != 1) scaleFactor = 2 * (0.3 + Math.log10(scaleFactor));
+		if(scaleFactor > 2) scaleFactor = 1.5 * (0.3 + Math.log10(scaleFactor));
+		else scaleFactor = 1 + (scaleFactor * 0.075);
+		//scaleFactor = (scaleFactor + 3) / 4;
 		this.scaleFactor = scaleFactor;
 		int i = (int)((double)this.framebufferWidth / scaleFactor);
 		this.scaledWidth = (double)this.framebufferWidth / scaleFactor > (double)i ? i + 1 : i;

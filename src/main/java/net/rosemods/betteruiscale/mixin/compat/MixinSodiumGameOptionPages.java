@@ -13,6 +13,6 @@ public class MixinSodiumGameOptionPages {
     at = @At(value = "INVOKE", target = "Lme/jellysquid/mods/sodium/client/gui/options/control/SliderControl;<init> (Lme/jellysquid/mods/sodium/client/gui/options/Option;IIILme/jellysquid/mods/sodium/client/gui/options/control/ControlValueFormatter;)V"),
     index = 2)
     private static int modifyMax(int max) {
-        return 15;
+        return 30;
     }
 }
