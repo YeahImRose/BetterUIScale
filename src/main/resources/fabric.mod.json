@@ -5,9 +5,7 @@
 
   "name": "Better UI Scaling",
   "description": "Adds incremental UI scaling to Minecraft!",
-  "authors": [
-    "Rose"
-  ],
+  "authors": ["Rose"],
   "contact": {
     "sources": "https://github.com/YeahImRose/BetterUIScale"
   },
@@ -15,14 +13,12 @@
   "license": "CC0-1.0",
 
   "environment": "*",
-  "mixins": [
-    "betteruiscale.mixins.json"
-  ],
+  "mixins": ["betteruiscale.mixins.json"],
 
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
+    "minecraft": ">=1.17",
     "java": ">=16"
   },
   "suggests": {
